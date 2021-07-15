@@ -1,4 +1,4 @@
-package com.dane.api;
+package com.dane.api.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,15 +22,18 @@ public class Customer {
 	
 	private String email;
 	
+	private String telefono;
+	
 	public Customer() {
 		
 	}
 
-	public Customer(String nombre, String apellido, String email) {
+	public Customer(String nombre, String apellido, String email, String telefono) {
 		super();
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.email = email;
+		this.telefono = telefono;
 	}
 
 	public Long getId() {
@@ -65,9 +68,18 @@ public class Customer {
 		this.email = email;
 	}
 
+	public String getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+
 	@Override
 	public String toString() {
-		return "Customer {id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email + "}";
+		return "Customer{id:" + id + ", nombre:" + nombre + ", apellido:" + apellido + ", email:" + email
+				+ ", telefono:" + telefono + "}";
 	}
 	
 	
